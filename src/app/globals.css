@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 聊天消息样式 */
+.message {
+  @apply py-3 px-4 rounded-2xl max-w-[80%];
+}
+
+.message-user {
+  @apply bg-primary-500 text-white ml-auto;
+}
+
+.message-assistant {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.message-system {
+  @apply bg-gray-50 text-gray-500 text-sm italic;
+}
+
+/* 日历样式 */
+.calendar-day {
+  @apply p-2 text-center cursor-pointer hover:bg-gray-100 rounded-lg transition-colors;
+}
+
+.calendar-day-today {
+  @apply bg-primary-100 text-primary-700 font-semibold;
+}
+
+.calendar-day-has-event {
+  @apply relative;
+}
+
+.calendar-day-has-event::after {
+  content: '';
+  @apply absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-500 rounded-full;
+}
+
+/* 加载动画 */
+.typing-indicator {
+  @apply flex space-x-1;
+}
+
+.typing-indicator span {
+  @apply w-2 h-2 bg-gray-400 rounded-full;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* 工具调用展示 */
+.tool-call {
+  @apply bg-blue-50 border border-blue-200 rounded-lg p-3 my-2 text-sm;
+}
+
+.tool-call-header {
+  @apply font-medium text-blue-700 mb-1;
+}
+
+.tool-call-params {
+  @apply text-blue-600 font-mono text-xs;
+}
+
+/* 日程卡片 */
+.event-card {
+  @apply bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow;
+}
+
+.event-card-time {
+  @apply text-sm text-gray-500;
+}
+
+.event-card-title {
+  @apply font-medium text-gray-900 mt-1;
+}
+
+.event-card-location {
+  @apply text-sm text-gray-500 mt-1 flex items-center gap-1;
+}

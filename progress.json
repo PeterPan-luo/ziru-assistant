@@ -1,0 +1,79 @@
+{
+  "session_id": "mvp-001",
+  "project": "ziru-assistant",
+  "phase": "MVP",
+  "completed": [
+    {
+      "task": "project-init",
+      "description": "项目初始化",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "init"
+    },
+    {
+      "task": "db-schema",
+      "description": "数据库 Schema 设计",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "schema"
+    },
+    {
+      "task": "glm5-integration",
+      "description": "GLM-5 Provider 集成",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "glm5"
+    },
+    {
+      "task": "orchestrator",
+      "description": "Orchestrator Agent",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "orchestrator"
+    },
+    {
+      "task": "schedule-agent",
+      "description": "Schedule Agent + 工具",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "schedule"
+    },
+    {
+      "task": "api-routes",
+      "description": "Chat API + Events API",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "api"
+    },
+    {
+      "task": "frontend",
+      "description": "聊天界面 + 日历视图",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "frontend"
+    },
+    {
+      "task": "docs",
+      "description": "Harness Engineering 文档",
+      "completed_at": "2026-03-23T00:00:00Z",
+      "commit": "docs"
+    }
+  ],
+  "pending": [
+    {
+      "task": "user-auth",
+      "description": "用户认证系统",
+      "priority": "high",
+      "blocked_by": null
+    },
+    {
+      "task": "tests",
+      "description": "单元测试和集成测试",
+      "priority": "high",
+      "blocked_by": null
+    },
+    {
+      "task": "expense-agent",
+      "description": "Expense Agent",
+      "priority": "medium",
+      "blocked_by": null
+    }
+  ],
+  "current_focus": null,
+  "attempt_count": 0,
+  "last_error": null,
+  "updated_at": "2026-03-23T00:00:00Z"
+}
